@@ -1,0 +1,325 @@
+.home-page {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Hero Section Styling - الألوان الأصلية مع التوسيط الكامل */
+.hero-section {
+  padding: 140px 20px 120px;
+  background: linear-gradient(135deg, #f8fafc 0%);
+  position: relative;
+  display: flex;
+  align-items: center;      /* التوسيط العمودي */
+  justify-content: center;  /* التوسيط الأفقي */
+  min-height: 70vh;         /* إعطاء مساحة مريحة لظهور السيكشن في المنتصف */
+}
+
+/* تعديل الحاوية لتصبح عمود واحد ممركز بنسبة 100% */
+.hero-container.single-layout {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* تنسيق محتوى الهيرو وتوسيطه بالكامل ككتلة واحدة */
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;    /* توسيط العناصر أفقياً */
+  text-align: center;     /* توسيط النصوص */
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.hero-content .hero-badge {
+  background: rgba(87, 118, 185, 0.15);
+  color: #5776b9;
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #0b1f3a;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero-content h1 span {
+  color: #5776b9;
+}
+
+/* لضمان أن الفقرة النصية ممركزة ومريحة للعين */
+.hero-content p.hero-lead-text {
+  font-size: 1.1rem;
+  color: #475569;
+  line-height: 1.7;
+  margin: 0 auto 35px;     
+  max-width: 550px;
+}
+
+/* توسيط الأزرار وتوزيع المسافة بينها تماماً */
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center; 
+  width: 100%;
+}
+
+.btn-primary {
+  background: #0b1f3a;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: #5776b9;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(87, 118, 185, 0.2);
+}
+
+.btn-secondary {
+  border: 2px solid #0b1f3a;
+  color: #0b1f3a;
+  padding: 15px 30px;
+  border-radius: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-secondary:hover {
+  background: #0b1f3a;
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* Features Bar Styling */
+.features-bar {
+  background: #0b1f3a;
+  color: white;
+  padding: 30px 20px;
+}
+
+.features-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.feat-icon {
+  font-size: 2rem;
+  color: #8aa4d8;
+}
+
+.feature-item h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.feature-item p {
+  font-size: 0.8rem;
+  color: #cbd5e1;
+}
+
+.locations-section {
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #f8fafc 0%);
+}
+
+.locations-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.locations-header .subtitle {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #5776b9;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.locations-header h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #0b1f3a;
+  margin: 0;
+}
+
+.locations-header .animated-line {
+  height: 3px;
+  width: 80px;
+  background: linear-gradient(90deg, #5776b9, #0b1f3a, #5776b9);
+  margin: 18px 0;
+  border-radius: 2px;
+}
+
+/* Grid Layout for Maps */
+.locations-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 35px;
+}
+
+/* Location Card Design - الألوان الأصلية */
+.location-card {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(11, 31, 58, 0.08);
+  border-radius: 24px;
+  padding: 25px;
+  font-size:2rem;
+
+  box-shadow: 0 15px 35px rgba(11, 31, 58, 0.04);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.location-card:hover {
+  background: #ffffff;
+  border-color: rgba(87, 118, 185, 0.25);
+  box-shadow: 0 25px 50px rgba(11, 31, 58, 0.08);
+}
+
+.loc-info-box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.loc-icon {
+  font-size: 1.8rem;
+  color: #5776b9;
+}
+
+.loc-info-box h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #0b1f3a;
+  margin: 0 0 4px 0;
+}
+
+.loc-info-box p {
+  color: #64748b;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* Map Wrapper with Rounded Corners */
+.map-wrapper {
+  width: 100%;
+  height: 350px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+}
+
+/* Responsive Scaling */
+@media (max-width: 992px) {
+  .hero-content h1 {
+    font-size: 2.8rem;
+  }
+  .features-container {
+    flex-direction: column;
+    gap: 25px;
+    align-items: flex-start;
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: 868px) {
+  .locations-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    
+  }
+  .map-wrapper {
+    height: 280px;
+  }
+}
+
+
+/* طبقة الفلاش المستقلة */
+.flash-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  pointer-events: none; /* عشان تقدري تدوسي على الأزرار عادي */
+  z-index: 999; /* عشان نضمن إنه فوق الخلفية والنصوص وقت الوميض */
+  
+  /* أنيميشن الفلاش السريع */
+  animation: flashStrike 1s cubic-bezier(0.1, 0.9, 0.2, 1) forwards;
+}
+
+@keyframes flashStrike {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.95; /* ضربة الفلاش القوية المفاجئة */
+  }
+  100% {
+    opacity: 0; /* يختفي تماماً وترجع ألوانك الأصلية */
+    display: none;
+  }
+}
+
+.flash-overlay {
+  position: fixed; /* يغطي الشاشة بالكامل حتى لو عملتي سكرول */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #ffffff;
+  pointer-events: none; /* لا يحجب الضغط على أي زرار */
+  z-index: 99999; /* أعلى من أي عنصر أو أنيميشن في الموقع */
+  
+  /* أنيميشن ضربة الفلاش السريعة والخاطفة */
+  animation: flashStrike 0.8s cubic-bezier(0.1, 0.8, 0.1, 1) forwards;
+}
+
+@keyframes flashStrike {
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.95; /* ومضة الفلاش المفاجئة */
+  }
+  100% {
+    opacity: 0; /* يختفي تماماً وترجع ألوانك الأصلية بنقائها */
+  }
+}

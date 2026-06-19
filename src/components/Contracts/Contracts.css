@@ -1,0 +1,185 @@
+.contracts-section {
+  padding: 100px 20px;
+
+  background: linear-gradient(135deg, #f8fafc 0%);
+  backdrop-filter: blur(18px);
+
+  overflow: hidden;
+}
+
+.contracts-header {
+  text-align: center;
+
+  margin-bottom: 60px;
+}
+
+.contracts-header span {
+  color: #5776b9;
+
+  font-size: 0.85rem;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+.contracts-header h1 {
+  font-size: 2.6rem;
+
+  color: #0b1f3a;
+
+  font-weight: 800;
+
+  margin: 15px 0;
+}
+
+.contracts-header p {
+  color: #64748b;
+
+  max-width: 650px;
+
+  margin: auto;
+
+  line-height: 1.7;
+}
+
+.contracts-grid {
+  max-width: 1200px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 25px;
+}
+
+.contract-card {
+  background: rgba(255, 255, 255, 0.8);
+
+  border-radius: 22px;
+
+  padding: 25px 15px;
+
+  text-align: center;
+
+  position: relative;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(11, 31, 58, 0.08);
+
+  box-shadow: 0 15px 35px rgba(11, 31, 58, 0.08);
+
+  transition: 0.3s;
+}
+
+.contract-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+
+  left: -120%;
+
+  width: 60%;
+
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.8),
+    transparent
+  );
+
+  animation: shine 2.5s infinite;
+}
+
+@keyframes shine {
+  0% {
+    left: -120%;
+  }
+
+  100% {
+    left: 150%;
+  }
+}
+
+.logo-box {
+  height: 100px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+.logo-box img {
+  max-width: 85%;
+
+  max-height: 75px;
+
+  object-fit: contain;
+
+  transition: 0.4s;
+}
+
+.contract-card:hover img {
+  transform: scale(1.1);
+}
+
+.contract-card h3 {
+  font-size: 0.9rem;
+
+  color: #0b1f3a;
+
+  margin-top: 18px;
+
+  font-weight: 700;
+}
+
+@media (max-width: 1000px) {
+  .contracts-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .contracts-section {
+    padding: 70px 15px;
+  }
+
+  .contracts-header h1 {
+    font-size: 2rem;
+  }
+
+  .contracts-grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+  }
+
+  .contract-card {
+    padding: 20px 10px;
+  }
+
+  .logo-box {
+    height: 80px;
+  }
+
+  .contract-card h3 {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .contracts-grid {
+    grid-template-columns: 1fr;
+  }
+}
