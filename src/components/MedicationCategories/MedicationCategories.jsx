@@ -1,52 +1,55 @@
 import React from 'react';
-import "./MedicationCategories.css"; // تعديل المسار ليتطابق مع اسم الفولدر والكيس الحقيقية
+import "./MedicationCategories.css";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import { 
   FaCapsules, 
   FaBaby, 
   FaPumpMedical, 
   FaKitMedical, 
   FaHeartPulse, 
-  FaWandMagicSparkles // تعديل الأيقونة المفقودة بأيقونة صحيحة وموجودة في fa6
+  FaWandMagicSparkles 
 } from "react-icons/fa6";
 
 function MedicationCategories() {
+  const { t } = useTranslation();
+
   const categories = [
     {
       icon: <FaCapsules />,
-      title: "Prescription Medications",
-      subtitle: "Chronic & Specialized Treatments",
-      desc: "A comprehensive and fully-monitored stock for chronic diseases, critical illness protocols, and specialized therapies."
+      title: t("cat_presc_title"),
+      subtitle: t("cat_presc_sub"),
+      desc: t("cat_presc_desc")
     },
     {
       icon: <FaHeartPulse />,
-      title: "OTC & Pain Relief",
-      subtitle: "Everyday Health Essentials",
-      desc: "Quick and safe over-the-counter remedies, cold and flu treatments, painkillers, and trusted first-aid support."
+      title: t("cat_otc_title"),
+      subtitle: t("cat_otc_sub"),
+      desc: t("cat_otc_desc")
     },
     {
       icon: <FaPumpMedical />,
-      title: "Dermocosmetics & Skincare",
-      subtitle: "Premium Clinical Beauty",
-      desc: "Top international and local brands specialized in medical skincare, hair revitalization, and advanced dermatological solutions."
+      title: t("cat_skin_title"),
+      subtitle: t("cat_skin_sub"),
+      desc: t("cat_skin_desc")
     },
     {
       icon: <FaBaby />,
-      title: "Baby & Mother Care",
-      subtitle: "Gentle Infant Nutrition & Wellness",
-      desc: "Certified infant milk formulas, secure baby products, hypoallergenic skincare, and essential maternal health supplements."
+      title: t("cat_baby_title"),
+      subtitle: t("cat_baby_sub"),
+      desc: t("cat_baby_desc")
     },
     {
       icon: <FaWandMagicSparkles />,
-      title: "Vitamins & Supplements",
-      subtitle: "Immunity & Daily Vitality",
-      desc: "High-potency immunity boosters, premium multi-vitamins, certified sports nutrition, and essential daily mineral complexes."
+      title: t("cat_vit_title"),
+      subtitle: t("cat_vit_sub"),
+      desc: t("cat_vit_desc")
     },
     {
       icon: <FaKitMedical />,
-      title: "Medical Devices & Supplies",
-      subtitle: "Home Health Monitoring Equipment",
-      desc: "Accurate blood pressure monitors, glucose meters, advanced sanitizers, and high-quality daily medical accessories."
+      title: t("cat_dev_title"),
+      subtitle: t("cat_dev_sub"),
+      desc: t("cat_dev_desc")
     }
   ];
 
@@ -65,7 +68,6 @@ function MedicationCategories() {
 
   return (
     <section className="med-categories" id="categories">
-      {/* Premium Header */}
       <div className="categories-header">
         <motion.span 
           className="subtitle"
@@ -74,7 +76,7 @@ function MedicationCategories() {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          Our Medical Range
+          {t("med_range_sub")}
         </motion.span>
 
         <motion.h1
@@ -83,7 +85,7 @@ function MedicationCategories() {
           transition={{ duration: 0.7, delay: 0.1 }}
           viewport={{ once: true }}
         >
-          Explore Our Product Categories
+          {t("med_range_title")}
         </motion.h1>
 
         <motion.div 
@@ -100,7 +102,7 @@ function MedicationCategories() {
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
         >
-          Everything you and your family need, carefully managed by professional healthcare experts.
+          {t("med_range_desc")}
         </motion.p>
       </div>
 

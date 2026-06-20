@@ -1,7 +1,7 @@
 import "./App.css";
 
 import { Routes, Route } from "react-router-dom";
-
+import './components/i18n/i18n.js'; 
 import Navbar from "./components/Navbar/navbar";
 import Footer from "./components/Footer/footer";
 import Home from "./components/Home/home.jsx";

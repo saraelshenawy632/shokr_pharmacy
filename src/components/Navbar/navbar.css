@@ -278,3 +278,48 @@
     left: 150%;
   }
 }
+/* زرار اللغة للشاشات الكبيرة */
+.lang-btn {
+  background: #0b1f3a;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: .3s;
+}
+
+.lang-btn:hover {
+  background: #5776b9;
+}
+
+/* إخفاء زرار الموبايل في الشاشات الكبيرة وإخفاء زرار الديسكتوب في الموبايل */
+.mobile-lang-li {
+  display: none;
+}
+
+@media(max-width:768px){
+  .lang-btn {
+    display: none; /* إخفاء الزرار الخارجي على الموبايل */
+  }
+  .mobile-lang-li {
+    display: block; /* إظهاره كعنصر داخل القائمة المنسدلة */
+    margin-top: 10px;
+  }
+  .lang-btn-mobile {
+    background: transparent;
+    color: #0b1f3a;
+    border: 1px solid #0b1f3a;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+}

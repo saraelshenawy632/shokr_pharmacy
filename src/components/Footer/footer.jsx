@@ -1,5 +1,6 @@
 import React from "react";
 import "./footer.css";
+import { useTranslation } from "react-i18next";
 import {
   FaTruck,
   FaHeart,
@@ -11,6 +12,8 @@ import {
 } from "react-icons/fa";
 
 function Footer() {
+  const { t } = useTranslation();
+
   const handleCall = (phoneNumber) => {
     window.open(`tel:${phoneNumber}`, "_self");
   };
@@ -24,37 +27,32 @@ function Footer() {
       <div className="footer-container">
         <div className="footer-box">
           <FaTruck className="footer-icon" />
-          <h3>Deliver All Over Egypt</h3>
-          <p>Fast and reliable delivery</p>
+          <h3>{t("ser_truck_title")}</h3>
+          <p>{t("feat_truck_desc")}</p>
         </div>
 
         <div className="footer-box">
           <FaHeart className="footer-icon" />
-          <h3>Always Ready For You</h3>
-          <p>Your health is our priority</p>
+          <h3>{t("feat_avail_title")}</h3>
+          <p>{t("feat_avail_desc")}</p>
         </div>
 
         <div className="footer-box">
           <FaShieldAlt className="footer-icon" />
-          <h3>Secure Payments</h3>
-          <p>Multiple payment methods</p>
+          <h3>{t("secure_payments")}</h3>
+          <p>{t("payment_desc")}</p>
         </div>
       </div>
 
       <div className="footer-content">
         <p className="footer-brand-text">
-          Because your health deserves attention, quality medicine, personal
-          care, and a pharmacy team you can trust.
+          {t("footer_brand")}
         </p>
 
         <div className="social">
           <div
             className="social-btn"
-            onClick={() =>
-              handleSocialClick(
-                "https://www.instagram.com/shokr_pharmacy1?igsh=Mms5ZXdjamI5czJo",
-              )
-            }
+            onClick={() => handleSocialClick("https://www.instagram.com/shokr_pharmacy1?igsh=Mms5ZXdjamI5czJo")}
             role="button"
             tabIndex={0}
           >
@@ -63,11 +61,7 @@ function Footer() {
 
           <div
             className="social-btn"
-            onClick={() =>
-              handleSocialClick(
-                "https://www.facebook.com/share/1BUGweBP7p/?mibextid=wwXIfr",
-              )
-            }
+            onClick={() => handleSocialClick("https://www.facebook.com/share/1BUGweBP7p/?mibextid=wwXIfr")}
             role="button"
             tabIndex={0}
           >
@@ -109,7 +103,7 @@ function Footer() {
       </div>
 
       <div className="copyright">
-        © 2026 Shokr Pharmacy. All Rights Reserved.
+        {t("footer_rights")}
       </div>
     </footer>
   );

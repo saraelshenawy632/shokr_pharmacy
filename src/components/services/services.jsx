@@ -1,4 +1,6 @@
+import React from "react";
 import "./services.css";
+import { useTranslation } from "react-i18next";
 import {
   FaPills,
   FaTruckMedical,
@@ -7,40 +9,41 @@ import {
   FaSyringe,
   FaNotesMedical
 } from "react-icons/fa6";
-
 import { motion } from "framer-motion";
 
 function Services() {
+  const { t } = useTranslation();
+
   const services = [
     {
       icon: <FaPills />,
-      title: "Medicine Availability",
-      text: "Wide range of medicines and healthcare products available anytime."
+      title: t("ser_avail_title"),
+      text: t("ser_avail_desc")
     },
     {
       icon: <FaTruckMedical />,
-      title: "Fast Delivery",
-      text: "Delivering your medicines safely all over Egypt."
+      title: t("ser_truck_title"),
+      text: t("ser_truck_desc")
     },
     {
       icon: <FaUserDoctor />,
-      title: "Medical Consultation",
-      text: "Professional support to help you choose the right products."
+      title: t("ser_doctor_title"),
+      text: t("ser_doctor_desc")
     },
     {
       icon: <FaHeartPulse />,
-      title: "Healthcare Products",
-      text: "Quality personal care and wellness products."
+      title: t("ser_pulse_title"),
+      text: t("ser_pulse_desc")
     },
     {
       icon: <FaSyringe />,
-      title: "Medical Supplies",
-      text: "Trusted medical equipment and supplies."
+      title: t("ser_supplies_title"),
+      text: t("ser_supplies_desc")
     },
     {
       icon: <FaNotesMedical />,
-      title: "Prescriptions",
-      text: "Easy prescription services with trusted care."
+      title: t("ser_presc_title"),
+      text: t("ser_presc_desc")
     }
   ];
 
@@ -54,7 +57,7 @@ function Services() {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          What We Offer
+          {t("services_sub")}
         </motion.span>
 
         <motion.h1
@@ -63,7 +66,7 @@ function Services() {
           transition={{ duration: 0.7, delay: 0.1 }}
           viewport={{ once: true }}
         >
-          Our Services
+          {t("services_title")}
         </motion.h1>
 
         <motion.div 
@@ -80,7 +83,7 @@ function Services() {
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
         >
-          Complete pharmacy care made for you
+          {t("services_desc")}
         </motion.p>
       </div>
 

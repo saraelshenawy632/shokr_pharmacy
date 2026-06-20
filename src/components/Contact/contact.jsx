@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import "./contact.css";
 import { FaPhone, FaEnvelope, FaClock, FaWhatsapp } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import WebsiteQRCode from "../WebsiteQRCode/WebsiteQRCode";
 
 function ContactUs() {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -21,14 +23,13 @@ function ContactUs() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     const whatsappNumber = formData.targetNumber;
 
     const textMessage =
-      `*New Message from Website* \n\n` +
-      `*Name:* ${formData.name}\n` +
-      `*Email:* ${formData.email}\n` +
-      `*Message:* ${formData.message}`;
+      `${t("whatsapp_header")} \n\n` +
+      `*${t("form_name")}:* ${formData.name}\n` +
+      `*${t("form_email")}:* ${formData.email}\n` +
+      `*${t("form_msg")}:* ${formData.message}`;
 
     const encodedMessage = encodeURIComponent(textMessage);
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
@@ -46,7 +47,7 @@ function ContactUs() {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          Get In Touch
+          {t("contact_us")}
         </motion.span>
 
         <motion.h1
@@ -55,7 +56,7 @@ function ContactUs() {
           transition={{ duration: 0.7, delay: 0.1 }}
           viewport={{ once: true }}
         >
-          Contact Us
+          {t("contact_us")}
         </motion.h1>
 
         <motion.div
@@ -72,7 +73,7 @@ function ContactUs() {
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
         >
-          We are here to help and answer any question you might have
+          {t("contact_desc")}
         </motion.p>
       </div>
 
@@ -84,10 +85,8 @@ function ContactUs() {
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <h2>Contact Information</h2>
-          <p className="info-desc">
-            Feel free to reach out to us through any of these channels.
-          </p>
+          <h2>{t("contact_info_h2")}</h2>
+          <p className="info-desc">{t("contact_info_p")}</p>
 
           <div className="info-items">
             <div className="info-item">
@@ -95,7 +94,7 @@ function ContactUs() {
                 <FaPhone />
               </div>
               <div className="info-text">
-                <h3>Phone Numbers</h3>
+                <h3>{t("phone_title")}</h3>
                 <p>+20 100 400 3501 (Mobile)</p>
                 <p>040 333 4857 (Landline)</p>
               </div>
@@ -106,7 +105,7 @@ function ContactUs() {
                 <FaEnvelope />
               </div>
               <div className="info-text">
-                <h3>Email Address</h3>
+                <h3>{t("email_title")}</h3>
                 <p>contact@shokrpharmacy.com</p>
               </div>
             </div>
@@ -116,8 +115,8 @@ function ContactUs() {
                 <FaClock />
               </div>
               <div className="info-text">
-                <h3>Working Hours</h3>
-                <p>Open 24/7 for your convenience</p>
+                <h3>{t("hours_title")}</h3>
+                <p>{t("hours_desc")}</p>
               </div>
             </div>
           </div>
@@ -141,7 +140,7 @@ function ContactUs() {
                 letterSpacing: "0.5px",
               }}
             >
-              Scan to open this website on your phone
+              {t("qr_text")}
             </p>
             <WebsiteQRCode />
           </div>
@@ -156,7 +155,7 @@ function ContactUs() {
         >
           <form onSubmit={handleSubmit}>
             <div className="form-group">
-              <label>Full Name</label>
+              <label>{t("form_name")}</label>
               <input
                 type="text"
                 name="name"
@@ -168,7 +167,7 @@ function ContactUs() {
             </div>
 
             <div className="form-group">
-              <label>Email Address</label>
+              <label>{t("form_email")}</label>
               <input
                 type="email"
                 name="email"
@@ -180,7 +179,7 @@ function ContactUs() {
             </div>
 
             <div className="form-group">
-              <label>Send Message To</label>
+              <label>{t("form_target")}</label>
               <select
                 name="targetNumber"
                 value={formData.targetNumber}
@@ -195,7 +194,7 @@ function ContactUs() {
             </div>
 
             <div className="form-group">
-              <label>Message</label>
+              <label>{t("form_msg")}</label>
               <textarea
                 name="message"
                 value={formData.message}
@@ -207,8 +206,8 @@ function ContactUs() {
             </div>
 
             <button type="submit" className="submit-btn">
-              <span>Send via WhatsApp</span>
-              <FaWhatsapp className="btn-icon" style={{ fontSize: "1.2rem" }} />
+              <span>{t("form_btn")}</span>
+              <FaWhatsapp className="btn-icon" style={{ fontSize: "1.2rem", marginInlineStart: "8px" }} />
             </button>
           </form>
         </motion.div>

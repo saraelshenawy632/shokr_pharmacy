@@ -2,6 +2,7 @@ import React from "react";
 import "./home.css";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import {
   FaArrowRight,
   FaUserShield,
@@ -15,6 +16,7 @@ import Contracts from "../Contracts/Contracts";
 
 function Home() {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   return (
     <div className="home-page">
@@ -28,14 +30,12 @@ function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <span className="hero-badge">Welcome to Shokr Pharmacy</span>
+            <span className="hero-badge">{t("welcome_badge")}</span>
             <h1>
-              Your Health Deserves <br />
-              <span>Expert Attention</span>
+              {t("hero_h1")}
             </h1>
             <p className="hero-lead-text">
-              Your trusted partner in healthcare, providing premium medicines,
-              24/7 personal care, and lightning-fast delivery all over Egypt.
+              {t("hero_lead")}
             </p>
             <div className="hero-buttons">
               <button
@@ -43,8 +43,8 @@ function Home() {
                 onClick={() => navigate("/contact")}
                 style={{ cursor: "pointer", border: "none" }}
               >
-                <span>Order Now</span>
-                <FaArrowRight />
+                <span>{t("order_now")}</span>
+                <FaArrowRight style={{ marginInlineStart: "8px" }} />
               </button>
 
               <button
@@ -52,35 +52,34 @@ function Home() {
                 onClick={() => navigate("/services")}
                 style={{ cursor: "pointer", border: "none" }}
               >
-                Our Services
+                {t("services")}
               </button>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* 2. Quick Features Bar */}
       <section className="features-bar">
         <div className="features-container">
           <div className="feature-item">
             <FaClock className="feat-icon" />
             <div>
-              <h3>24/7 Availability</h3>
-              <p>Always open for you</p>
+              <h3>{t("feat_avail_title")}</h3>
+              <p>{t("feat_avail_desc")}</p>
             </div>
           </div>
           <div className="feature-item">
             <FaTruck className="feat-icon" />
             <div>
-              <h3>All Egypt Delivery</h3>
-              <p>Fast & secured shipping</p>
+              <h3>{t("feat_truck_title")}</h3>
+              <p>{t("feat_truck_desc")}</p>
             </div>
           </div>
           <div className="feature-item">
             <FaUserShield className="feat-icon" />
             <div>
-              <h3>Certified Care</h3>
-              <p>100% trusted medicines</p>
+              <h3>{t("feat_care_title")}</h3>
+              <p>{t("feat_care_desc")}</p>
             </div>
           </div>
         </div>
@@ -97,7 +96,7 @@ function Home() {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            Our Branches
+            {t("branches_sub")}
           </motion.span>
           <motion.h1
             initial={{ opacity: 0, y: -30 }}
@@ -105,7 +104,7 @@ function Home() {
             transition={{ duration: 0.7, delay: 0.1 }}
             viewport={{ once: true }}
           >
-            Visit Shokr Pharmacy Branches
+            {t("branches_title")}
           </motion.h1>
           <div className="animated-line"></div>
         </div>
@@ -124,8 +123,8 @@ function Home() {
                 <FaMapMarkerAlt className="loc-icon" />
               </div>
               <div>
-                <h3>Tanta Branch</h3>
-                <p>Al-Bahr Street, In front of El-Ghamrawy</p>
+                <h3>{t("tanta_branch")}</h3>
+                <p>{t("tanta_address")}</p>
               </div>
             </div>
             <div className="map-wrapper">
@@ -155,8 +154,8 @@ function Home() {
                 <FaMapMarkerAlt className="loc-icon" />
               </div>
               <div>
-                <h3>Berma Branch</h3>
-                <p>Main Road, Berma Center, Tanta</p>
+                <h3>{t("berma_branch")}</h3>
+                <p>{t("berma_address")}</p>
               </div>
             </div>
             <div className="map-wrapper">
