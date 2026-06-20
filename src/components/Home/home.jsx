@@ -31,9 +31,7 @@ function Home() {
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <span className="hero-badge">{t("welcome_badge")}</span>
-            <h1>
-              {t("hero_h1")}
-            </h1>
+            <h1 dangerouslySetInnerHTML={{ __html: t("hero_h1") }} />
             <p className="hero-lead-text">
               {t("hero_lead")}
             </p>

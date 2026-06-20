@@ -2,7 +2,7 @@ import React from 'react';
 import { QRCodeSVG } from 'qrcode.react';
 
 function WebsiteQRCode() {
-  const websiteUrl = "https://shokr-pharmacy.vercel.app"; 
+  const websiteUrl = "https://shokrpharmacy.vercel.app/"; 
 
   return (
     <div className="qr-container" style={{

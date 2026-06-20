@@ -9,7 +9,7 @@ const resources = {
       "services": "Services",
       "contracts": "Contracts",
       "contact_us": "Contact Us",
-
+        "hero_h1": "Your Health <br /> <span>Deserves Expert Attention</span>",
       "med_range_sub": "Our Medical Range",
       "med_range_title": "Explore Our Product Categories",
       "med_range_desc": "Everything you and your family need, carefully managed by professional healthcare experts.",
@@ -33,7 +33,6 @@ const resources = {
       "cat_dev_desc": "Accurate blood pressure monitors, glucose meters, advanced sanitizers, and high-quality daily medical accessories.",
 
       "welcome_badge": "Welcome to Shokr Pharmacy",
-      "hero_h1": "Your Health Deserves Expert Attention",
       "hero_lead": "Your trusted partner in healthcare, providing premium medicines, 24/7 personal care, and lightning-fast delivery all over Egypt.",
       "order_now": "Order Now",
       "feat_avail_title": "24/7 Availability",
@@ -97,7 +96,7 @@ const resources = {
       "services": "خدماتنا",
       "contracts": "التعاقدات",
       "contact_us": "تواصل معنا",
-
+"hero_h1": "صحتك <br /> <span>تستحق رعاية الخبراء</span>",
       "med_range_sub": "مجموعتنا الطبية",
       "med_range_title": "استكشف أقسام منتجاتنا",
       "med_range_desc": "كل ما تحتاجه أنت وعائلتك، تحت إشراف كامل من خبراء رعاية صحية محترفين.",
@@ -121,7 +120,6 @@ const resources = {
       "cat_dev_desc": "أجهزة قياس ضغط الدم الدقيقة، أجهزة قياس السكر، معقمات متطورة، وإكسسوارات طبية يومية عالية الجودة.",
 
       "welcome_badge": "مرحباً بكم في صيدلية شكر",
-      "hero_h1": "صحتك تستحق رعاية الخبراء",
       "hero_lead": "شريكك الموثوق في الرعاية الصحية، نوفر أدوية ممتازة، رعاية شخصية على مدار الساعة، وتوصيل سريع للغاية لجميع أنحاء مصر.",
       "order_now": "اطلب الآن",
       "feat_avail_title": "متاحون 24/7",
